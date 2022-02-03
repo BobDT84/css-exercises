@@ -7,15 +7,15 @@ body {
   background: pink;
   border: 3px solid blue;
   /* CHANGE ME */
-  padding: 0px;
-  margin: 0px;
+  padding: 32px;
+  margin: 12px;
 }
 
 .two {
   background: lightblue;
   border: 3px solid purple;
   /* CHANGE ME */
-  margin-bottom: 0px;
+  margin-bottom: 48px;
 }
 
 .three {
@@ -23,6 +23,17 @@ body {
   border: 3px solid brown;
   width: 200px;
   /* CHANGE ME */
-  padding: 0px;
-  margin-left: 0px;
+  padding: 32px;
+  margin-left: 325px;
+  /* 
+  I got this wrong.  After checking the solution
+  I should have used auto. This was mentioned in the 
+  previous lesson in the material
+  https://css-tricks.com/almanac/properties/m/margin/
+  under the heading "auto and centering"
+  Since this was only margin-left it wouldn't have 
+  centered and would have been similar to a right alignment
+  Also, note to self to remember that the width needs
+  to be defined in order for auto margin to work as alignment
+  */
 }
