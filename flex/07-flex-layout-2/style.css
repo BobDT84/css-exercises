@@ -2,27 +2,82 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px;
+  font-weight: 900;
+  padding-left: 16px;
+  /* After looking at the solution.css
+  I should have used padding: 0 16x to 
+  account for the padding needed on the 
+  right side of the screen during resizing */
+  display: flex;
+  align-items: center;
+}
+
+.body-container {
+  display: flex;
+  /* I didn't add flex: 1 to my body-container
+  and that is causing my footer to not stick
+  to the bottom.  This was something I overlooked
+  */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  /* I used gap on the card-container and 
+  the solution.css used a padding: 16 px
+  and margin: 16x.  I don't think there is
+  anything wrong with my method of doing this
+  but I could be overlooking something */
+  padding: 32px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
+  flex: 1 0 auto;
+  /* forgot to use flex-shrink to reduce
+  verbose code (same as previous exercise */
+  padding: 16px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+li {
+  margin-bottom: 16px;
 }
