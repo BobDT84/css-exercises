@@ -2,6 +2,24 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.plant {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  /* solution.css used max-width instead of width */
+}
+
+.text {
+  display: flex;
+  text-align: center;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
 img {
   width: 100px;
   height: 100px;
@@ -10,6 +28,11 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  /* solution.css avoided applying flex to .title by
+  adding the text-align property to the body selector */
 }
 
 /* do not edit this footer */
