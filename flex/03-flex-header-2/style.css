@@ -12,6 +12,25 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.header *{
+  /* this selector achieved the desired results, but I am not knowledgeable enough
+  to know whether or not this is an acceptable best practice. The solution added 
+  the properties below into individual elements and class selectors. */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /*
+  used gap because of this statement in the README.md file
+  "- flex is used to arrange everything."
+  My original thought was to use margin, but gap feels like
+  the best practice after using it.
+  */
 }
 
 .profile-image {
@@ -45,4 +64,10 @@ a {
 
 ul {
   list-style-type: none;
+
+  flex-direction: row;
+  /* after looking at the solution.css realized this was unecessary
+  because row is the default setting */
+  padding: 0px;
+  margin: 0px;
 }
